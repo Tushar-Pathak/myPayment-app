@@ -1,0 +1,19 @@
+{
+  "name": "blockchain",
+  "version": "0.0.1",
+  "description": "A basic blockchain Application using nodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tushar Pathak <tkp.tushar@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.15.1",
+    "crypto-js": "^3.1.9-1",
+    "immutable": "^3.8.2",
+    "inquirer": "^5.1.0",
+    "keypair": "^1.0.1",
+    "sequelize": "^4.37.3"
+  }
+}
