@@ -1,3 +1,9 @@
+/*
+This program is the basic implementation of a payment app money transactions with the help of a blockchain.
+In this, basic encryption and decryption is performed
+using public and private key cryptography.However, database imlememtation is not implemented yet.  
+*/
+
 'use strict';
 
 const program = require('commander');
@@ -10,6 +16,7 @@ class MyPaymentApp{
 
   constructor(){
 
+    //Basic version info.
     program
       .version('0.0.1')
       .description('A Block Chain Application');
@@ -19,14 +26,19 @@ class MyPaymentApp{
 
     ///Keep track of user login details.
     this.login = false;
-    this.transferMoney();
-    this.listAll();
-    this.loginUser();
-    this.createUser();
+    this.mainloop();
 
     program.parse(process.argv);
   }
 
+   mainloop(){
+      this.transferMoney();
+      this.listAll();
+      this.loginUser();
+      this.createUser();  
+   }
+
+  //Create new user to either send or recive money(just for demo purpose)
   createUser(){
     program
       .command('create <name>')
@@ -50,7 +62,7 @@ class MyPaymentApp{
       });
   }
 
-  //This function will list all blocks bu only to admin.
+  //This function will list all blocks but only to admin.
   listAll(){
     program
       .command('list')
@@ -77,8 +89,9 @@ class MyPaymentApp{
       }
     ];
 
+    //Transfer money to other users.
     program
-      .command('transfer money')
+      .command('transfer')
       .alias('t')
       .description('Transfer Money to another person')
       .action( () => {
@@ -95,6 +108,7 @@ class MyPaymentApp{
       });
   }
 
+ //Mine Transactions..
   mineTransactions(){
     this.myCoin.minePendingTransactions(this.name);
   }
