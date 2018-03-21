@@ -1,4 +1,4 @@
-# nodeMYSQL
+# myPayment App
 
 A Simple implementation of Payment App with the help of **BlockChain** technology using Javascript.
 
@@ -35,4 +35,4 @@ To transfer Money to other user simply use:
  node index.js transfer
 ```
 
-**Caution** The data that you are creating is not persistent.This program just deal with the basic implememtation of BlockChain in nodeJs.The aim of this project is to give you an idea of how blockchain works,public and private cryptography,and also to build a command line interface using nodeJs.
+**Caution** The data that you are creating is not persistent.This program just deal with the basic implememtation of BlockChain in nodeJs.The aim of this project is to give you an idea of how blockchain works, public and private cryptography, and also to build a command line interface using nodeJs.
